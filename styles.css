@@ -1,0 +1,396 @@
+body {
+  font-family: "General Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #ff105f, #ffad06, #fe5b3b);
+  padding: 1rem 2rem;
+  z-index: 999; /* Ensure the header stays above other elements */
+}
+
+#menu-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#menu-icon h1 {
+  margin: 0;
+}
+
+.navbar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  justify-content: center; /* Align items in the center horizontally */
+}
+#menu-icon img {
+  width: 45px; /* Adjust the size of the image as needed */
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #080808;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: #1308db;
+  font-size: large;
+  border-radius: 5px;
+}
+
+.navbar a {
+  position: relative;
+}
+
+.navbar a::after {
+  content: ""; /* Create pseudo-element for vertical centering */
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%; /* Ensure full height of link */
+  width: 100%; /* Ensure full width of link */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: 70px; /* Adjust padding to accommodate the fixed header */
+}
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 100%;
+  height: 200%;
+}
+
+.text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 70px;
+  color: rgb(93, 145, 93);
+}
+
+.hero p {
+  font-size: 24px;
+  color: gray;
+}
+
+/* About Founder Section */
+.about-founder {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.about-founder img {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.about-founder h2 {
+  color: #444;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-founder p {
+  color: #666;
+  font-size: 18px;
+}
+
+/* Why Choose Section */
+.why-choose {
+  background-color: #ffd700;
+  padding: 100px 0;
+}
+
+.why-choose h2 {
+  color: #444;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  margin: 0 20px;
+}
+
+.icon img {
+  max-width: 100%;
+}
+
+/* Countdown Timer Section */
+.countdown {
+  background-color: #d3d3d3;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.countdown h2 {
+  color: #444;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#timer {
+  color: #ff4500;
+  font-size: 48px;
+}
+
+/* Call to Action Section */
+.cta {
+  background-color: #ffd700;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.cta h2 {
+  color: #444;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+button {
+  background-color: #ff4500;
+  color: #fff;
+  font-size: 24px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #dc143c;
+}
+
+/* Slide-Up Form */
+.slide-up-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  max-width: calc(100% - 40px); /* Adjust as needed */
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+}
+
+.slide-up-form form {
+  margin: 0;
+}
+
+.slide-up-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 18px;
+}
+
+.slide-up-form input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5); /* Transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+}
+
+.slide-up-form button {
+  background-color: #ff4500;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.slide-up-form button:hover {
+  background-color: #dc143c;
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .about-founder h2 {
+    font-size: 24px;
+  }
+
+  .about-founder p {
+    font-size: 16px;
+  }
+
+  .why-choose h2 {
+    font-size: 24px;
+  }
+
+  .countdown h2 {
+    font-size: 24px;
+  }
+
+  .cta h2 {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 12px 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    padding: 80px 0;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .about-founder {
+    padding: 80px 0;
+  }
+
+  .about-founder h2 {
+    font-size: 20px;
+  }
+
+  .about-founder p {
+    font-size: 14px;
+  }
+
+  .why-choose {
+    padding: 80px 0;
+  }
+
+  .why-choose h2 {
+    font-size: 20px;
+  }
+
+  .countdown {
+    padding: 60px 0;
+  }
+
+  .countdown h2 {
+    font-size: 24px;
+  }
+
+  .cta {
+    padding: 80px 0;
+  }
+
+  .cta h2 {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 12px 25px;
+  }
+
+  .slide-up-form {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .about-founder h2 {
+    font-size: 20px;
+  }
+
+  .about-founder p {
+    font-size: 14px;
+  }
+
+  .why-choose h2 {
+    font-size: 20px;
+  }
+
+  .countdown h2 {
+    font-size: 20px;
+  }
+
+  .cta h2 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
