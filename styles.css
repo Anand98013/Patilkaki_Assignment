@@ -17,6 +17,10 @@ header {
   z-index: 999; /* Ensure the header stays above other elements */
 }
 
+.box-menu {
+  display: none; /* Hide box menu by default */
+}
+
 #menu-icon {
   display: flex;
   align-items: center;
@@ -298,6 +302,49 @@ button:hover {
     font-size: 20px;
     padding: 12px 30px;
   }
+
+  .box-menu {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Adjust background color as needed */
+    padding: 1rem 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar.show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar li {
+    margin: 0;
+    text-align: center;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 0.5rem 0;
+    color: #080808;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .navbar a:hover {
+    background-color: #ddd;
+    color: #1308db;
+    font-size: large;
+    border-radius: 5px;
+  }
+}
+
 }
 
 @media only screen and (max-width: 600px) {
