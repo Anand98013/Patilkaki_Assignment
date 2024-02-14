@@ -55,3 +55,17 @@ function nextSlide() {
 }
 
 setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var boxMenu = document.getElementById("box-menu");
+  var navbar = document.getElementById("navbar");
+
+  if (boxMenu && navbar) {
+    boxMenu.addEventListener("click", function() {
+      navbar.classList.toggle("show");
+    });
+  } else {
+    console.log("Box menu or navbar not found.");
+  }
+});
